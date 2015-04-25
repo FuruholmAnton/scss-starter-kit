@@ -1,0 +1,5 @@
+@mixin bg-init($src){
+	background-image: url($src);
+	background-size: cover;
+	background-repeat: no-repeat;
+} 

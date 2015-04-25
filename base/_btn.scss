@@ -1,0 +1,24 @@
+%button{
+	padding: 20px;
+}
+%link-button{
+	
+}
+%error-button{
+
+}
+%success-button{
+
+}
+
+
+button{
+	@extend %button;
+
+}
+input[type="button"]{
+	@extend %button;
+}
+input[type="submit"]{
+	@extend %button;
+}

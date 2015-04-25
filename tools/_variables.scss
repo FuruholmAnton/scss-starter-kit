@@ -1,0 +1,27 @@
+$color-main: #00c4e0;
+$color-main-dark: darken($color-main, 10%);
+$color-main-darkest: darken($color-main, 10%);
+$color-hover-dark: rgba(#000, 0.05);
+$color-beta: $color-main-dark;
+$color-gamma: #736AB4;
+$grey-dark: #555;
+$grey-dark-extra: #222;
+$grey-light: #ccc;
+$grey-light-extra: #F7F7F7;
+$grey: #999;
+
+
+$font-size-base: 16px;
+$font-size-large: ($font-size-base * 1.25);
+$font-size-small: ($font-size-base * 0.75);
+
+$font-main: 'helvetica', sans-serif;
+$font-body: 'helvetica', sans-serif;
+$font-heading:'helvetica', serif;
+ 
+$font-awesome: "FontAwesome";
+
+
+$color-error: #910d03;
+$color-error-dark: darken($color-error, 10%);
+$color-error-darkest: darken($color-error, 15%);
