@@ -7,16 +7,19 @@
 
 
 html {
+
   box-sizing: border-box;
-  height: initial;
+  height: 100%;
 }
 *, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 body{
 	font-family: $font-body;
 	background-color: #fff;
-	height: initial;
+	height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -54,5 +57,10 @@ p, a, figcaption, li, label{
 img{
 	width: 100%;
 }
-
+p+a{
+	text-decoration: underline;
+}
+p+p{
+	margin-top: 1rem;
+}
 
