@@ -1,15 +1,11 @@
-@import "fonts";
 @import "reset";
-
-@import "input";
-@import "btn";
-@import "form";
 
 
 html {
 
   box-sizing: border-box;
   height: 100%;
+  font-size: $font-size-base;
 }
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;

@@ -1,5 +1,11 @@
 
 @import "header";
 @import "footer";
-@import "home";
 
+.container{
+  margin:{
+    left: auto;
+    right: auto;
+  }
+  max-width: 1000px;
+}
