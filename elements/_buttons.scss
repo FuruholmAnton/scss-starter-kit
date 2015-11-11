@@ -1,8 +1,20 @@
 %button{
 	padding: 12px 24px;
 	cursor: pointer;
+  background-color: #ccc;
+  color: #fff;
+  &:hover{
+    background-color: #aaa;
+  }
 }
 
+.button{
+  @extend %button;
+}
+.button-positive{
+  @extend %button;
+  background-color: 
+}
 
 button{
 	@extend %button;

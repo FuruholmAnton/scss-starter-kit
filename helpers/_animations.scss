@@ -2,3 +2,19 @@
 	0% {}
 	100% {}
 }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to { 
+    transform: rotate(360deg);
+  }
+}
+
+/***  Rotates infinite
+      animation-name:             rotate; 
+      animation-duration:         10s; 
+      animation-iteration-count:  infinite;
+      animation-timing-function: linear;
+*/
