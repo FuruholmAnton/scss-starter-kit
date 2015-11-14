@@ -3,8 +3,9 @@
 	cursor: pointer;
   background-color: #ccc;
   color: #fff;
+  position: relative;
   &:hover{
-    background-color: #aaa;
+
   }
 }
 
@@ -13,7 +14,17 @@
 }
 .button-positive{
   @extend %button;
-  background-color: 
+  background-color: $green;
+  &:hover{
+   background-color: darken($green, 10%); 
+  }
+}
+.button-negative{
+  @extend %button;
+  background-color: $red;
+  &:hover{
+   background-color: darken($red, 10%); 
+  }
 }
 
 button{

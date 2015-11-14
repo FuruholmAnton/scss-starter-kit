@@ -3,10 +3,12 @@
 @import "footer";
 @import 'grid';
 
-.container{
-  margin:{
-    left: auto;
-    right: auto;
-  }
-  max-width: 1000px;
+.text-center{
+  text-align: center;
+}
+.green{
+  color: $green;
+}
+.red{
+  color: $red;
 }
