@@ -1,26 +1,26 @@
-// bower:scss
-// endbower
-		 
-/*	
-*       /\
-*      /  \
-*     /    \
-*    /  /\  \
-*   /  ____  \
-*  /__/	   \__\
-*
-* Built by Anton Furuholm
-*
-*
-*/
-@import "vendors/vendors";
-@import "variables-site/variables-site";
-@import "helpers/helpers";
-@import "base/base";
-@import "typography/typography";
-@import "modules/modules";
-@import "elements/elements";
-@import "layout/layout";
-@import "media/media";
-@import "pages/pages";
-@import "navigation/navigation";
+//  CONFIG
+// ============================================================================
+@import "config/variables";
+@import "config/mixins";
+@import "config/pow";
+@import "config/grid";
+
+/*  BASE
+============================================================================ */
+@import "base/normalize";
+@import "base/reset";
+@import "base/elements";
+@import "base/typography";
+
+/* COMPONENET
+============================================================================ */
+@import "component/header";
+@import "component/footer";
+@import "component/navigation";
+@import "component/home";
+
+
+/*  UTILITY
+============================================================================ */
+@import "utility/ui-helpers";
+@import "utility/ui-animation";

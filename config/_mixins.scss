@@ -1,0 +1,37 @@
+//  Config: Mixins
+// ============================================================================
+
+// Wrapper: Center page and/or element
+@mixin wrapper($i) {
+    max-width: $i;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// Aspect ratio: Resize background with set ratio
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+}
+
+// Element align: Vertical center element
+@mixin element-align($position: relative) {
+    position: $position;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// Make clearfix
+@mixin clearfix {
+    &:after {
+        display: table;
+        clear: both;
+        content: "";
+    }
+}

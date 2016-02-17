@@ -1,0 +1,22 @@
+{
+  "name": "roots",
+  "homepage": "https://github.com/FuruholmAnton/sass-get-started",
+  "authors": [
+    "Anton Furuholm <anton.furuholm@gmail.com>"
+  ],
+  "description": "A scss starter kit",
+  "main": "main.scss",
+  "moduleType": [],
+  "keywords": [
+    "scss",
+    "css"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,61 @@
+$xs = 400px;
+$sm = 600px;
+$md = 800px;
+$lg = 1000px;
+$xl = 1200px;
+
+.container {
+  max-width: $lg;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+
+  &--fluid {
+    max-width: 100%;
+  }
+
+  &--xlarge {
+    max-width: $xl;
+  }
+
+  &--medium {
+    max-width: $md;
+  }
+
+  &--sm {
+    max-width: $sm;
+  }
+
+  &--xs {
+    max-width: $sm;
+  }
+}
+
+.col-sm-6 {
+
+}
+
+@mixin mq-large {
+  @media only screen and (max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin mq-medium {
+  @media only screen and (max-width: $md) {
+    @content;
+  }
+}
+
+@mixin mq-small {
+  @media only screen and (max-width: $sm) {
+    @content;
+  }
+}
+
+@mixin mq-xsmall {
+  @media only screen and (max-width: $xs) {
+    @content;
+  }
+}

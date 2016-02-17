@@ -1,0 +1,12 @@
+
+// Colors
+$color-main: #ffb106; // #fdb70a;
+$color-main-dark: darken($color-main, 10%);
+$color-main-light: lighten($color-main, 10%);
+
+
+
+// Animation
+$ease-in: all .4s ease-in-out;
+
+$shadow: 0 2px 4px rgba(#000, 0.2);
