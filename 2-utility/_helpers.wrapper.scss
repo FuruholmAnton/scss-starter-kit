@@ -1,0 +1,13 @@
+/* Wrapper
+========================================== */
+
+%wrapper {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@mixin wrapper($width) {
+    @extend %clearfix;
+    @extend %wrapper;
+    max-width: $width;
+}

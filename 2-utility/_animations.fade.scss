@@ -1,0 +1,73 @@
+
+%fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+
+
+@keyframes fadeOut {
+    0% {
+        display: block;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@mixin fade-out($time:2s, $delay:0s) {
+    animation-name: fadeOut;
+    animation-duration: $time;
+    animation-delay: $delay;
+    animation-fill-mode:forwards;
+    transition-timing-function: ease-in-out;
+    @include hacks();
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@mixin fade-in($time:2s, $delay:0s) {
+    animation-name: fadeIn;
+    animation-duration: $time;
+    animation-fill-mode: both;
+    animation-delay: $delay;
+    transition-timing-function: ease-in-out;
+    @include hacks();
+}
+
+.fade-in {
+    @include fade-in(1s, 0.5s);
+}
+
+.fade-in-fast {
+    @include fade-in(.5s, 0.5s);
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@mixin fade-in-down($time:2s, $delay:0s) {
+    animation-name: fadeInDown;
+    animation-duration: $time;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+    transition-timing-function: ease-out;
+    @include hacks();
+}

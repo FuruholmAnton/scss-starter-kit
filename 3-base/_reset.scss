@@ -1,0 +1,80 @@
+/* Base: Reset
+============================================================================ */
+
+*,
+:after,
+:before {
+	box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html,
+p {
+    font-family: $font-main;
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+
+}
+
+body {
+    background-color: #fff;
+    position: relative;
+}
+
+ul,
+li {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+::selection {
+    background: rgba($color-main, 0.7);
+    color: #fff;
+    text-shadow: none;
+}
+
+fieldset{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    font-family: $font-main;
+    font-weight: 600;
+}
+
+p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 1rem;
+    color: $color-text;
+    font-family: $font-main;
+
+    & + & {
+        margin-top: 1em;
+    }
+}
+
+a:not([href]) {
+    text-decoration: none;
+    color: #000;
+}

@@ -1,0 +1,63 @@
+// Use on float parent
+%clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+@mixin position($position: absolute, $left: 50%, $top: 50%) {
+    position: $position;
+    top: $top;
+    left: $left;
+    transform: translate(-#{$top}, -#{$left});
+
+    @if $top == center {
+        top: 50%;
+    }
+    @if $left == center {
+        left: 50%;
+    }
+
+}
+
+// Shadow
+@mixin box-shadow($x:0, $y:1px, $z:2px, $color:rgba(#000, 0.2)) {
+
+    @if type-of($x) == 'color' {
+        box-shadow: 0 1px 2px $x;
+
+    } @else {
+        box-shadow: $x $y $z $color;
+    }
+
+}
+
+// Aspect ratio: Resize background with set ratio
+// REVIEW: Set as vw?
+@mixin aspect-ratio($width, $height) {
+    height: ($height / $width) * 100%;
+}
+
+// Element align: Vertical center element
+@mixin element-align($position: relative) {
+    position: $position;
+    top: 50%;
+    transform: translateY(-50%);
+}
+@mixin absolute-center($position: absolute) {
+    position: $position;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%, -50%);
+}
+
+@mixin square($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+
+

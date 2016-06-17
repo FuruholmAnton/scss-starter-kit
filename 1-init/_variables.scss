@@ -1,0 +1,41 @@
+/* VARIABLES
+========================================= */
+
+// Fonts
+$font-serif: 'Lora', Cambria, Georgia, "Times New Roman", Times,serif;
+$font-sans: Arial, Helvetica, sans-serif;
+
+$font-copy: $font-sans;
+$font-heading: $font-serif;
+$font-main: $font-sans;
+
+
+// Colors
+$color-main: #35adc7; // #fdb70a;
+$color-main-dark: darken($color-main, 10%);
+$color-main-light: lighten($color-main, 10%);
+
+$color-secondary: #FFC107;
+
+$color-success: #66BB6A;
+$color-error: #C62828;
+
+$color-link: #283593;
+$color-link-visited: lighten(#283593, 15%);
+$color-link-hover: darken(#283593, 15%);
+
+$color-text:       #222;
+$color-background: #f8f8f8;
+
+
+// Animation
+$ease-in: all .4s ease-in-out;
+
+$shadow: 0 1px 2px rgba(#000, 0.2);
+$shadow-md: 0 2px 4px rgba(#000, 0.2);
+
+
+// Sizes
+$desktop: 1100px;
+
+

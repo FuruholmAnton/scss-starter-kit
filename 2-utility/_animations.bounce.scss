@@ -1,0 +1,72 @@
+@keyframes bounce {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.3, 1.3, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@mixin bounce($time:1s, $delay:0s) {
+    animation-name: bounce;
+    animation-duration: $time;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+    transition-timing-function: ease-out;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    // @include hacks();
+}
+
+@keyframes bounce-big {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(2, 2, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@mixin bounce-up($time:1s, $delay:0s) {
+    animation-name: bounce-up;
+    animation-duration: $time;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+    // transition-timing-function: ease-out;
+    animation-iteration-count: 1;
+    transform-origin: center;
+}
+@keyframes bounce-up {
+  from {
+    transform: scale3d(0, 0, 0);
+  }
+
+  50% {
+    transform: scale3d(1.6, 1.6, 1);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@mixin bounce-big($time:1s, $delay:0s) {
+    animation-name: bounce-big;
+    animation-duration: $time;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+    // transition-timing-function: ease-out;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    @include hacks();
+}

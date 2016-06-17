@@ -1,0 +1,101 @@
+@keyframes scale-up {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+}
+
+@mixin scale-up($time:1s, $delay:0s) {
+    animation-name: scale-up;
+    animation-duration: $time;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+    // transition-timing-function: ease-out;
+    animation-iteration-count: 1;
+    transform-origin: center center;
+    @include hacks();
+}
+
+@keyframes scale-up-big {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    transform: scale3d(1.5, 1.5, 1.5);
+  }
+}
+
+@mixin scale-up-big($time:1s, $delay:0s) {
+    animation-name: scale-up-big;
+    animation-duration: $time;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+    // transition-timing-function: ease-out;
+    animation-iteration-count: 1;
+    transform-origin: center center;
+    @include hacks();
+}
+
+@keyframes scale-up-xl {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  to {
+    transform: scale3d(2.3, 2.3, 2.3);
+  }
+}
+
+@mixin scale-up-xl($time:1s, $delay:0s) {
+    animation-name: scale-up-xl;
+    animation-duration: $time;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+    // transition-timing-function: ease-out;
+    animation-iteration-count: 1;
+    transform-origin: center center;
+    @include hacks();
+}
+
+
+@keyframes scale-in {
+  from {
+    transform: scale3d(0, 0, 0);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@mixin scale-in($time:1s, $delay:0s) {
+    animation-name: scale-in;
+    animation-duration: $time;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+    // transition-timing-function: ease-out;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    @include hacks();
+}
+
+@keyframes scale-origin {
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@mixin scale-origin($time:1s, $delay:0s) {
+    animation-name: scale-origin;
+    animation-duration: $time;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+    // transition-timing-function: ease-out;
+    animation-iteration-count: 1;
+    transform-origin: center;
+    @include hacks();
+}

@@ -1,0 +1,23 @@
+/* Component: Buttons
+============================================================================ */
+
+%button-round {
+	border: 1px solid #444;
+	padding: 0 1.4em;
+	color: #666;
+	border-radius: 50px;
+	height: 2.5em;
+	line-height: 2.5em;
+	display: inline-block;
+
+	&:hover {
+		color: #fff;
+		border-color: $color-main;
+		transition: all 0.1s ease-in;
+		background-color: $color-main;
+	}
+
+	&:visited {
+    background: #f2f2f2;
+	}
+}

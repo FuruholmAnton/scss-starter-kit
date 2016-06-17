@@ -1,0 +1,96 @@
+/* Animations
+============================================================================ */
+
+
+/* Underline From Left */
+@mixin underline-from-left {
+    $duration: 0.3s !default;
+    $activeColor: #2098D1 !default;
+
+    @include hacks();
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        right: 100%;
+        bottom: 0;
+        background: $activeColor;
+        height: 2px;
+        transition-property: "right";
+        transition-duration: $duration;
+        transition-timing-function: ease-out;
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+
+        &:before {
+            right: 0;
+        }
+    }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@mixin pulse($time:1s, $delay:0s) {
+    animation-name: pulse;
+    animation-duration: $time;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+    // transition-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    transform-origin: center bottom;
+    @include hacks();
+}
+
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@mixin slide-in-right($time:1s, $delay:0s) {
+    animation-name: slide-in-right;
+    animation-duration: $time;
+    animation-delay: $delay;
+    animation-fill-mode: both;
+    // transition-timing-function: ease-out;
+    animation-iteration-count: 1;
+    transform-origin: center;
+}
+
+
+
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
