@@ -1,0 +1,8 @@
+@function color($key) {
+  @if map-has-key($fonts, $key) {
+    @return map-get($fonts, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $fonts.";
+  @return null;
+}

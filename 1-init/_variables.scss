@@ -5,37 +5,33 @@
 $font-serif: 'Lora', Cambria, Georgia, "Times New Roman", Times,serif;
 $font-sans: Arial, Helvetica, sans-serif;
 
-$font-copy: $font-sans;
-$font-heading: $font-serif;
-$font-main: $font-sans;
+$fonts: (
+	body: $font-sans,
+	heading: $font-serif,
+	main: $font-sans
+);
 
 
 // Colors
-$color-main: #35adc7; // #fdb70a;
-$color-main-dark: darken($color-main, 10%);
-$color-main-light: lighten($color-main, 10%);
+$colors: (
+	main: #35adc7,
+	beta: #FFC107,
+	gamma: #ddd,
+	delta: #ddd,
+	success: #66BB6A,
+	error: #C62828,
+	link: #283593,
+	text: #222,
+	background: #f8f8f8
+);
 
-$color-secondary: #FFC107;
+$color-variations: (
+	main-dark: darken(map-get($colors, main), 10%),
+	main-light: lighten(map-get($colors, main), 10%),
+	link-visited: lighten(map-get($colors, link), 15%),
+	link-hover: darken(map-get($colors, link), 15%),
+);
 
-$color-success: #66BB6A;
-$color-error: #C62828;
-
-$color-link: #283593;
-$color-link-visited: lighten(#283593, 15%);
-$color-link-hover: darken(#283593, 15%);
-
-$color-text:       #222;
-$color-background: #f8f8f8;
-
-
-// Animation
-$ease-in: all .4s ease-in-out;
-
-$shadow: 0 1px 2px rgba(#000, 0.2);
-$shadow-md: 0 2px 4px rgba(#000, 0.2);
-
-
-// Sizes
-$desktop: 1100px;
+$colors: map-merge($colors, $color-variations);
 
 
