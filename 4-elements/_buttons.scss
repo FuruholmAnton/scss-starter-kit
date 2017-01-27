@@ -12,9 +12,9 @@
 
 	&:hover {
 		color: #fff;
-		border-color: $color-main;
+		border-color: color(main);
 		transition: all 0.1s ease-in;
-		background-color: $color-main;
+		background-color: color(main);
 	}
 
 	&:visited {

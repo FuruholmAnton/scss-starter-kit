@@ -2,16 +2,16 @@
 ============================================================================ */
 
 %link {
-    color: $color-link;
-    font-family: $font-main;
+    color: color(link);
+    font-family: font(main);
     text-decoration: underline;
 
     &:visited {
-        color: lighten($color-link, 15%);
+        color: lighten(color(link), 15%);
     }
 
     &:hover {
-        color: darken($color-link, 15%);
+        color: darken(color(link), 15%);
     }
 
 }

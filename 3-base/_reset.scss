@@ -14,7 +14,7 @@ body {
 
 html,
 p {
-    font-family: $font-main;
+    font-family: color(main);
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
 
@@ -39,7 +39,7 @@ img {
 }
 
 ::selection {
-    background: rgba($color-main, 0.7);
+    background: rgba(color(main), 0.7);
     color: #fff;
     text-shadow: none;
 }
@@ -58,7 +58,7 @@ h5,
 h6 {
     text-rendering: optimizeLegibility;
     margin: 0;
-    font-family: $font-main;
+    font-family: font(main);
     font-weight: 600;
 }
 
@@ -66,8 +66,8 @@ p {
     margin: 0;
     line-height: 1.4;
     font-size: 1rem;
-    color: $color-text;
-    font-family: $font-main;
+    color: color(body);
+    font-family: font(main);
 
     & + & {
         margin-top: 1em;

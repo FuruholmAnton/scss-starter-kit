@@ -35,3 +35,16 @@ $color-variations: (
 $colors: map-merge($colors, $color-variations);
 
 
+// Breakpoints
+$breakpoints: (
+    'width-small'   : 768px,
+    'width-medium'  : 1024px,
+    'width-large'   : 1200px,
+    'width-xlarge'  : 1400px,
+    'width-xxlarge' : 1500px,
+    'width-huge'    : 1600px,
+
+    'height-small'  : 600px,
+    'height-medium' : 770px,
+    'height-high'   : 900px
+);
