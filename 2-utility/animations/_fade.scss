@@ -1,14 +1,17 @@
 
+
+/*================================
+=            FADE OUT            =
+================================*/
+
 %fade-out {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
 
-
 @keyframes fadeOut {
     0% {
-        display: block;
         opacity: 1;
     }
 
@@ -25,6 +28,16 @@
     transition-timing-function: ease-in-out;
     @include hacks();
 }
+
+/*=====  End of FADE OUT  ======*/
+
+
+
+
+/*===============================
+=            FADE IN            =
+===============================*/
+
 
 @keyframes fadeIn {
     0% {
@@ -71,3 +84,7 @@
     transition-timing-function: ease-out;
     @include hacks();
 }
+
+/*=====  End of FADE IN  ======*/
+
+

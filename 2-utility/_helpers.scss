@@ -47,6 +47,7 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
 @mixin absolute-center($position: absolute) {
     position: $position;
     top: 50%;
@@ -54,12 +55,17 @@
     transform: translateY(-50%, -50%);
 }
 
-@mixin square($width, $height: $width) {
+
+@mixin size($width, $height: $width) {
   width: $width;
   height: $height;
 }
 
 
+
+/*==================================
+=            BREAKPOINT            =
+==================================*/
 
 @mixin breakpoint($width: false, $height: false) {
 
@@ -120,5 +126,10 @@
         }
     }
 }
+
+/*=====  End of BREAKPOINT  ======*/
+
+
+
 
 

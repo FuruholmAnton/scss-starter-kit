@@ -4,6 +4,14 @@
 
 @charset "utf-8";
 
+
+/*=======================================================================
+=            It's a folder structure, it's a way of thinking            =
+=======================================================================*/
+
+
+
+
 /*  VENDOR
 ============================================================================ */
 
@@ -27,7 +35,6 @@
 @import "2-utility/functions/font";
 @import "2-utility/functions/ratio";
 // Helpers
-@import "2-utility/helpers.wrapper";
 @import "2-utility/helpers";
 
 
@@ -39,24 +46,47 @@
 @import "3-base/globals";
 
 
-/*  ELEMENTS
+/*  COMPONENTS
 ============================================================================ */
-@import "4-elements/links";
-@import "4-elements/headings";
-@import "4-elements/buttons";
+// Buttons
+@import "4-components/buttons/mixins";
+@import "4-components/buttons/extends";
+@import "4-components/buttons/component.buttons";
+// Links
+@import "4-components/links/mixins";
+@import "4-components/links/extends";
+@import "4-components/links/component.links";
+// Headings
+@import "4-components/headings/mixins";
+@import "4-components/headings/extends";
+@import "4-components/headings/component.headings";
 
-
-/* COMPONENET
-============================================================================ */
 
 
 /* Modules
 ============================================================================ */
-@import "6-components/navigation";
-@import "6-components/footer";
+// Header
+@import "5-modules/header/mixins";
+@import "5-modules/header/extends";
+@import "5-modules/header/module.header";
+// Footer
+@import "5-modules/footer/mixins";
+@import "5-modules/footer/extends";
+@import "5-modules/footer/module.footer";
+// Menu
+@import "5-components/navigation/mixins";
+@import "5-components/navigation/extends";
+@import "5-components/navigation/module.navigation";
 
 
-/* PAGES
+
+/* Layouts
+============================================================================ */
+@import "6-layouts/container";
+
+
+
+/* PAGES - Use only if you must
 ============================================================================ */
 @import "7-pages/home";
 
