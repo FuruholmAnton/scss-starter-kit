@@ -14,7 +14,7 @@ body {
 
 html,
 p {
-    font-family: color(main);
+    font-family: font(main);
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
 
@@ -66,7 +66,7 @@ p {
     margin: 0;
     line-height: 1.4;
     font-size: 1rem;
-    color: color(body);
+    color: color(text);
     font-family: font(main);
 
     & + & {

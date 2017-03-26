@@ -24,16 +24,19 @@
 
 /*  UTILITY
 ============================================================================ */
+// Functions
+@import "2-utility/functions/color";
+@import "2-utility/functions/font";
+@import "2-utility/functions/ratio";
+@import "2-utility/functions/strip-unit";
 // Animations
 @import "2-utility/animations/hacks";
 @import "2-utility/animations/bounce";
 @import "2-utility/animations/fade";
 @import "2-utility/animations/scale";
 @import "2-utility/animations/animations";
-// Functions
-@import "2-utility/functions/color";
-@import "2-utility/functions/font";
-@import "2-utility/functions/ratio";
+// Mixins
+@import "2-utility/mixins/responsive-type";
 // Helpers
 @import "2-utility/helpers";
 
@@ -74,9 +77,9 @@
 @import "5-modules/footer/extends";
 @import "5-modules/footer/module.footer";
 // Menu
-@import "5-components/navigation/mixins";
-@import "5-components/navigation/extends";
-@import "5-components/navigation/module.navigation";
+@import "5-modules/navigation/mixins";
+@import "5-modules/navigation/extends";
+@import "5-modules/navigation/module.navigation";
 
 
 

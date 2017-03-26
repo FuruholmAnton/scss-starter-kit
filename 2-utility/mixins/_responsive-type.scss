@@ -1,0 +1,60 @@
+/**
+ * @include responsive-type(22px, 38px);
+ * @include responsive-type(1.2, 1.05, line-height);
+ * @include responsive-type('14px@400px', '50px@1900px');
+ * @include responsive-type('1.2@400px', '1.05@1900px', line-height);
+ */
+
+
+// Base Responsive resize function that the type one uses
+@mixin responsive-resize($properties, $min-vw, $max-vw, $min-value, $max-value) {
+	@each $property in $properties {
+		#{$property}: $min-value;
+	}
+
+	@media (min-width: $min-vw) {
+		@each $property in $properties {
+			#{$property}: calc(#{$min-value} + #{strip-unit($max-value - $min-value)} * (100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)});
+		}
+	}
+
+	@media (min-width: $max-vw) {
+		@each $property in $properties {
+			#{$property}: $max-value;
+		}
+	}
+}
+
+// Type Focus helper mixin for the resize function
+@mixin responsive-type($min-value, $max-value, $properties: font-size) {
+	// use the global default values based on the assumption these
+	// will be contained in a block
+	$min-vw: $responsive-type-min-width;
+	$max-vw: $responsive-type-max-width;
+
+	// check if value is using the "@" api syntax.
+	@if ( type-of($min-value) == "string") {
+		// So it is a string does it have a "@" symbol to break apart
+		@if ( str-index($min-value, '@') ) {
+			// split string helper
+			$min-value-list : split-str($min-value, '@');
+			// unquote the split and cast the string to a number
+			// http://hugogiraudel.com/2014/01/15/sass-string-to-number/
+			$min-value: to-number( unquote( nth($min-value-list, 1) ) );
+			$min-vw: to-number( unquote( nth($min-value-list, 2) ));
+		}
+	}
+
+	// run the same checks over the $max-value
+	@if ( type-of($max-value) == "string") {
+		// So it is a string does it have a "@" symbol to break apart
+		@if ( str-index($max-value, '@') ) {
+			$max-value-list : split-str($max-value, '@');
+			$max-value: to-number( unquote( nth($max-value-list, 1) ) );
+			$max-vw: to-number( unquote( nth($max-value-list, 2) ));
+		}
+	}
+
+	// feed the shorter api back to the responsice resizer   @include
+	@include responsive-resize($properties, $min-vw, $max-vw, $min-value, $max-value);
+}

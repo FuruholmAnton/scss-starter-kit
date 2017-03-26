@@ -11,6 +11,9 @@ $fonts: (
 	main: $font-sans
 );
 
+$responsive-type-min-width: 320px !default;
+$responsive-type-max-width: 700px !default;
+
 
 // Colors
 $colors: (

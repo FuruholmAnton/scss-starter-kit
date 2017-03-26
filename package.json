@@ -1,0 +1,12 @@
+{
+  "name": "sass-base",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/FuruholmAnton/sass-get-started.git",
+  "author": "Anton Furuholm <anton.furuholm@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  }
+}
