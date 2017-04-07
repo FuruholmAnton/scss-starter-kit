@@ -1,0 +1,36 @@
+html,
+p {
+    font-family: font(main);
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-rendering: optimizeLegibility;
+    margin: 0;
+    font-family: font(main);
+    font-weight: 600;
+}
+
+p {
+    margin: 0;
+    line-height: 1.4;
+    font-size: 1rem;
+    color: color(text);
+    font-family: font(main);
+
+    & + & {
+        margin-top: 1em;
+    }
+}
+
+a:not([href]) {
+    text-decoration: none;
+    color: #000;
+}
